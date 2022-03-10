@@ -19,8 +19,13 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
-import Database from '@ioc:Adonis/Lucid/Database'
 
-Route.get('/', async () => {
-  return Database.from('users').select('*')
-})
+Route.group(() => {
+  
+  Route.get('/', async () => {
+    return { hello: 'world' }
+  }) 
+
+  Route.resource('/imoveis','ImoveisController').apiOnly()
+
+}).prefix('/api')
