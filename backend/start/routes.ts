@@ -28,4 +28,25 @@ Route.group(() => {
 
   Route.resource('/imoveis','ImoveisController').apiOnly()
 
+  Route.resource('/neighborhood','NeighborhoodsController').apiOnly()
+
+  Route.resource('/user','UsersController').apiOnly()
+
+  Route.post('login', async ({ auth, request, response }) => {
+    const email = request.input('email')
+    const password = request.input('password')
+  
+    try {
+      const token = await auth.use('api').attempt(email, password)
+      return token
+    } catch {
+      return response.badRequest('Invalid credentials')
+    }
+
+})
+
+   
 }).prefix('/api')
+
+
+

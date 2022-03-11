@@ -4,7 +4,7 @@ import Application from '@ioc:Adonis/Core/Application'
 
 import { v4 as uuidv4 } from 'uuid'
 
-export default class MomentsController {
+export default class ImoveisController {
   private validationOptions = {               // criando um objeto para validação da imagem
     types: ['image'],
     size: '2mb',                              // tamanho máximo da imagem
