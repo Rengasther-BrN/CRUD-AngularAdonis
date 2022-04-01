@@ -4,11 +4,12 @@
 		<label for="check" class="checkbtn">
 			<i class="fas fa-bars"></i>
 		</label>
-		
-        <img class="logo" src="../../../assets/logo.png">
+		<a class="logo" routerLink='home'>
+        	<img  src="../../../assets/logo.png" alt="logo">
+		</a>
 		
         <ul>
-			<li><a routerLinkActive="active" [routerLink]="['home']" >Imóveis</a></li>
+			<li><a routerLinkActive="active" [routerLink]="['home']" [routerLinkActiveOptions]="{exact:true}" >Imóveis</a></li>
 			<li><a routerLinkActive="active" [routerLink]="['about']" >Sobre</a></li>
 			<li><a routerLinkActive="active" [routerLink]="['contact']" >Contato</a></li>
 		</ul>

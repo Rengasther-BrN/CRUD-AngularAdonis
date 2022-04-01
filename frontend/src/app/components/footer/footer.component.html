@@ -7,8 +7,11 @@
   	 		<div class="footer-col">
   	 			<h4>Montalt</h4>
   	 			<ul>
-  	 				<li><a href="#">Imóveis</a></li>
-  	 				<li><a href="#">Contato</a></li>  	 				
+  	 				<li><a routerLinkActive="active" [routerLink]="['home']">Imóveis</a></li>
+					<li><a routerLinkActive="active" [routerLink]="['about']" >Sobre</a></li>
+  	 				<li><a routerLinkActive="active" [routerLink]="['contact']">Contato</a></li> 
+					<br>
+					<li><a routerLinkActive="active" [routerLink]="['login']">Área Administrativa</a></li> 	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">

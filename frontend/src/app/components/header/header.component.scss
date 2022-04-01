@@ -1,10 +1,11 @@
 header {
-	font-family: montserrat;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
 	background: rgb(255, 255, 255);
-	height: 300px;
+	justify-content: space-between;
+	height: 100px;
 	width: 100%;
 }
 
@@ -34,8 +35,7 @@ nav ul li a {
 	position: relative;
 	color: #ff660e;
 	font-size: 17px;
-	padding: 0px 10px;
-	border-radius: 5px;
+	padding: 0px 10px;	
 	text-transform: uppercase;
     text-decoration: none; 
 	font-weight: bold;   
@@ -57,8 +57,8 @@ a:hover:after{
 }
 
 a.active{
-	top: -5px;
-
+	background-color: #260eff;	
+	border-radius: 4px;
 }
 
 .checkbtn {
@@ -109,6 +109,10 @@ a.active{
 
 	nav ul li a {
 		font-size: 20px;
+	}
+
+	a.active{
+		background-color: blue;
 	}
 
 	a:hover {
