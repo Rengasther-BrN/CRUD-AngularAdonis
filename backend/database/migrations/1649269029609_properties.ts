@@ -1,8 +1,9 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Imoveis extends BaseSchema {
-  protected tableName = 'imoveis'
+export default class Properties extends BaseSchema {
+  protected tableName = 'properties'
 
+  
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')

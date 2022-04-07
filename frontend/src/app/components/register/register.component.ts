@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { Register } from 'src/app/Register';
+
 
 @Component({
   selector: 'app-register',
@@ -8,6 +12,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
+  @Output () onSubmit = new EventEmitter<Register>()
+
+  @Input() btnText!: string;
+  
   registerForm!: FormGroup;
 
   constructor() { }
@@ -17,20 +25,33 @@ export class RegisterComponent implements OnInit {
       id: new FormControl(''),
       title: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
-      image: new FormControl('')
+      image: new FormControl(''),
+      created_at: new FormControl(''),
+      updated_at: new FormControl('')
     });
   }
 
-  get title(){
+  get title() {
     return this.registerForm.get('title')!;
   }
 
-  get description(){
+  get description() {
     return this.registerForm.get('description')!;
+  }
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    this.registerForm.patchValue({ image: file});
   }
 
 
   submit(){
+    if(this.registerForm.invalid){
+      return;
+    }
+
+    this.onSubmit.emit(this.registerForm.value);
 
   }
 
