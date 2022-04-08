@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
 import { Register } from 'src/app/Register';
 
 

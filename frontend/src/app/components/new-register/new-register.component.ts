@@ -1,6 +1,8 @@
 import { RegisterService } from './../../services/register.service';
 import { Component, OnInit } from '@angular/core';
 import { Register } from 'src/app/Register';
+import { MessagesService } from 'src/app/services/messages.service';
+import { Router }  from '@angular/router';
 
 @Component({
   selector: 'app-new-register',
@@ -10,7 +12,11 @@ import { Register } from 'src/app/Register';
 export class NewRegisterComponent implements OnInit {
   btnText = 'Enviar';
 
-  constructor( private registerService: RegisterService) { }
+  constructor( 
+    private registerService: RegisterService, 
+    private messagesService: MessagesService,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
   }
@@ -27,6 +33,10 @@ export class NewRegisterComponent implements OnInit {
     }
 
     await this.registerService.createRegister(formData).subscribe();
+
+    this.messagesService.add('registro adinionado com sucesso!')
+
+    this.router.navigate(['/home']);
 
   }
 

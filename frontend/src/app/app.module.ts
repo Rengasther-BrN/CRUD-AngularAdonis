@@ -13,11 +13,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NewRegisterComponent } from './components/new-register/new-register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MessagesComponent } from './components/messages/messages.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -28,10 +36,12 @@ import { MessagesComponent } from './components/messages/messages.component';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
+    LoginComponent,
     ContactComponent,
     RegisterComponent,
     NewRegisterComponent,
-    MessagesComponent
+    MessagesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -41,7 +51,15 @@ import { MessagesComponent } from './components/messages/messages.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
