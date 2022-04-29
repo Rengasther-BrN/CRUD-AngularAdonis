@@ -28,8 +28,8 @@
     "types": [
       "@adonisjs/core",
       "@adonisjs/repl",
-      "@adonisjs/lucid",
-      "@adonisjs/auth"
+      "@japa/preset-adonis/build/adonis-typings",
+      "@adonisjs/lucid"
     ]
   }
 }
