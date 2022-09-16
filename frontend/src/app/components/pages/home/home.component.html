@@ -1,1 +1,27 @@
-<p>home works!</p>
+<div class="home-container">
+    <h1>Veja os momentos compartilhados</h1>
+    <!-- Pesquisar momento-->
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input 
+                type="text" 
+                placeholder="Ou busque por um momento..."
+                (input)="search($event)"
+            >
+        </form>
+    </div>
+    <!-- Dados do Banco de Dados -->
+    <div class="moments-container">
+        <div class="moment" *ngFor="let moment of moments">
+            <img 
+                src="{{baseApiUrl}}uploads/{{moment.image}}" 
+                alt="{{moment.title}}"
+            >
+            <h3>{{ moment.title }}</h3>
+            <p class="date"> Em: {{moment.created_at}}</p>
+            <p> Comentários: {{ moment.comments!.length}}</p>
+            <p><a routerLink="moments/{{moment.id}}">Detalhes</a></p>
+        </div>
+    </div>              
+</div>
