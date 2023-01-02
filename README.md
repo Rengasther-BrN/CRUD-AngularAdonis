@@ -2,6 +2,7 @@
 
 Project in Angular and AdonisJS
 
+
 <p>This project makes a CRUD linking the frontend with the backend using the resources of angular and adonis</p>
 
 ### Features:
