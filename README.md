@@ -20,6 +20,7 @@ Project in Angular and AdonisJS
 * [MySQL] - (https://www.mysql.com/)
 
 
+
 _______________________________
 
 * Made with by BrN Marques [my linkedIn](https://www.linkedin.com/in/brunomarques85/)
